@@ -129,7 +129,7 @@ int main( int argc, char ** argv )
 
 //			hex = 0x404040;
 
-			hex = HSVtoHEX( i*.05 + frame*.01, 1, 1.0 ); //0.50 = overload. 0.45 = overheat? =0.40 = HOT
+//			hex = HSVtoHEX( i*.05 + frame*.01, 1, 1.0 ); //0.50 = overload. 0.45 = overheat? =0.40 = HOT
 
 //			hex = (((frame+i)%186)>160)?0xff8f8f:0; //The worm.
 //			hex = (((frame+i)%186)>130)?0x0000ff:0; //The red worm.
@@ -171,12 +171,11 @@ int main( int argc, char ** argv )
 		}
 #endif
 
-		sendto(sockfd,buffer,sizeof(buffer),0,
-             (struct sockaddr *)&servaddr,sizeof(servaddr));
+		sendto(sockfd,buffer,sizeof(buffer),0,(struct sockaddr *)&servaddr,sizeof(servaddr));
 		frame++;
 		printf( "." );
 		fflush( stdout );
-		usleep(14000);
+		usleep(25000);
 	}
 }
 
