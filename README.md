@@ -1,3 +1,5 @@
+#This is a rewrite of cnlohr's original code (it didn't work for me past 25 leds) ...
+
 #ESP8266 WS2812 Driver (With ESP8266 Build Guide)
 A basic WS2812 driver for the ESP8266.  You send a UDP packet to it on port 7777 and it plops it out GPIO0.
 In something the WS2812B can understand.  WARNING: You should have a 100p cap across GPIO0 to GND.  I don't know why but it will flash if you don't.
@@ -80,7 +82,7 @@ Note the "License" file in this folder, you can move it into esp_iot_sdk_v0.9.3 
 Once you got all those four, check out a copy of ws2812esp8266.
 ```
 cd ~/esp8266
-git clone https://github.com/cnlohr/ws2812esp8266.git
+git clone https://github.com/sfranzyshen/ws2812esp8266.git
 ```
 
 Configure it in your makefile with the following:
